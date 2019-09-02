@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="header-card">
+    <div class="card-item">
+      <img [src]="iconType" alt="mala">
+    </div>
+    <div class="card-item">
+      <p class="action" [ngClass]="{danger: bolls}">{{ cardValue }}</p>
+    </div>
+  </div>
+  <div class="card-count">
+    <h2>{{ cardCount }}</h2>
+    <p>{{ cardMensage }}</p>
+  </div>
+</div>
