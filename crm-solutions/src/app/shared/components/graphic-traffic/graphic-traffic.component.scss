@@ -1,0 +1,41 @@
+.gp {
+  width: 350px;
+  height: 350px;
+  .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 291px;
+    .items-bolls {
+      margin-top: 30px;
+      width: 126px;
+      display: flex;
+      flex-direction: column;
+      li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px;
+        justify-content: space-around;
+        p {
+          font-size: 12px;
+          font-weight: bold;
+          color: #B9B9B9;
+          text-align: left;
+          opacity: 1;
+        }
+        img {
+          width: 10px;
+          height: 10px;
+        }
+        &:nth-child(2) {
+          margin-left: 1px;
+          &:nth-last-child(2) {
+            margin-left: 10px;
+          }
+        }
+      }
+
+    }
+  }
+}

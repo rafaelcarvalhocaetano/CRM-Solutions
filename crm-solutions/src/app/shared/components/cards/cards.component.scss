@@ -1,4 +1,4 @@
-@import '../../../assets/theme/global.scss';
+@import '../../../../assets/theme/global.scss';
 
 .card {
   width: 160px;
@@ -10,6 +10,11 @@
     justify-content: space-between;
     padding: 21px 21px 0 21px;
     .card-item {
+      .icon-card {
+        width: 16px;
+        height: 16px;
+        opacity: 1;
+      }
       .action {
         font-size: 13px;
         font-family: 'Roboto';
