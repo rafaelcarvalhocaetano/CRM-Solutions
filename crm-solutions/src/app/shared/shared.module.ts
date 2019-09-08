@@ -8,6 +8,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MenuListComponent } from './components/menu-list/menu-list.component';
 import { GraphicTrafficComponent } from './components/graphic-traffic/graphic-traffic.component';
 import { CalendaryComponent } from './components/calendary/calendary.component';
+import { DetaListComponent } from './components/deta-list/deta-list.component';
+import { ShowCalendaryComponent } from './components/show-calendary/show-calendary.component';
 
 @NgModule({
   imports: [
@@ -21,7 +23,9 @@ import { CalendaryComponent } from './components/calendary/calendary.component';
     CardsComponent,
     MenuListComponent,
     GraphicTrafficComponent,
-    CalendaryComponent
+    CalendaryComponent,
+    DetaListComponent,
+    ShowCalendaryComponent
   ],
   exports: [
     CommonModule,
@@ -32,7 +36,9 @@ import { CalendaryComponent } from './components/calendary/calendary.component';
     CardsComponent,
     MenuListComponent,
     GraphicTrafficComponent,
-    CalendaryComponent
+    CalendaryComponent,
+    DetaListComponent,
+    ShowCalendaryComponent
   ]
 })
 export class SharedModule { }

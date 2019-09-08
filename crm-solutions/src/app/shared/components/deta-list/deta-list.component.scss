@@ -1,0 +1,22 @@
+.date-pik {
+  width: 190px;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid #EBEBEB;
+  border-radius: 20px;
+  align-items: center;
+  cursor: pointer;
+  .item-date {
+    p {
+      font-size: 12px;
+      font-weight: bold;
+      color: #B3B3B3;
+      text-align: left;
+    }
+  }
+  &:active {
+    background-color: #000;
+    color: #FFF;
+  }
+}
