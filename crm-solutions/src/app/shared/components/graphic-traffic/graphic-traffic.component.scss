@@ -40,15 +40,14 @@ $tmn: 10px;
       flex-direction: column;
       li {
         display: flex;
+        justify-content: space-between;
         flex-direction: row;
         align-items: center;
         margin-bottom: 10px;
-        justify-content: space-around;
         p {
           font-size: 12px;
           font-weight: bold;
           color: #B9B9B9;
-          text-align: left;
           opacity: 1;
         }
         img {

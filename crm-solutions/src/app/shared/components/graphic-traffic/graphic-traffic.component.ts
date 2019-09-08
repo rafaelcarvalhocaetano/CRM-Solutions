@@ -11,19 +11,23 @@ export class GraphicTrafficComponent implements OnInit {
   public LineChart: any = [];
   private colorBc;
 
+
   @Input()
   public values: number[];
 
   @Input()
   public labels: string [];
 
-  constructor() {}
-
-  ngOnInit() {
-    this.buildChart();
+  constructor() {
   }
 
-  private buildChart() {
+  ngOnInit() {
+    setTimeout(() => {
+      this.buildChart();
+    }, 1200);
+  }
+
+  buildChart() {
     this.LineChart = new Chart('doughnut', {
       type: 'doughnut',
       data: {
@@ -62,9 +66,9 @@ export class GraphicTrafficComponent implements OnInit {
               const info = data.labels[item[0].index];
               this.colorBc = data.datasets[0].backgroundColor[item[0].index];
               const dataset = data.datasets[0].data[item[0].index];
-              const dataCalc = data.datasets[0]._meta[0].total;
-              const calc = (dataset / dataCalc) * 100;
-              const percent = Math.round(calc);
+              // const dataCalc = data.datasets[0]._meta[0].total;
+              // const calc = (dataset / dataCalc) * 100;
+              const percent = Math.round(dataset);
               const dataResult = `${info}  ${percent}%`;
               return dataResult;
             },

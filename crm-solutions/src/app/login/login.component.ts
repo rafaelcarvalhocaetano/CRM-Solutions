@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuModel } from '../core/Models/MenuModel';
-import { GraphicModel, Gral } from '../core/Models/Graphic';
 
 @Component({
   selector: 'crm-login',
@@ -34,7 +32,7 @@ export class LoginComponent implements OnInit {
   //   {name: 'What makes a hotel bou…', icon: 'client'},
   // ];
 
-  public lisN = [11.2, 22.5, 44.1, 0];
+  public lisN = [11.2, 22.5, 44.1, 100];
   public lisLs = ['Mail', 'Phone', 'Site', 'API'];
 
   constructor() { }
