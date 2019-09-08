@@ -20,7 +20,11 @@
   [btnTitle]="'Show More'">
 </crm-menu-list> -->
 
-<crm-graphic-traffic
+<!-- <crm-graphic-traffic
   [values]="lisN"
   [labels]="lisLs"
-></crm-graphic-traffic>
+></crm-graphic-traffic> -->
+
+<div style="margin: 20px">
+  <crm-calendary (open)="show($event)"></crm-calendary>
+</div>

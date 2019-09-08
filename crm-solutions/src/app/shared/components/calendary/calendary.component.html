@@ -1,0 +1,5 @@
+<ul class="calendary" >
+  <li *ngFor="let itens of listWeek; let i = index" (click)="open.emit(itens)">
+    <a>{{ itens }}</a>
+  </li>
+</ul>

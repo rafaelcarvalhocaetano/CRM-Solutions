@@ -41,4 +41,9 @@ export class LoginComponent implements OnInit {
 
   }
 
+  show(event: string) {
+    const data = event.toLocaleLowerCase();
+    console.log('data ', data);
+  }
+
 }

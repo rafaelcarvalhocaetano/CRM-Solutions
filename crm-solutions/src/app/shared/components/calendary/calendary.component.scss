@@ -1,0 +1,46 @@
+.calendary {
+  width: 370px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  li {
+    border: 2px solid #EBEBEB;
+    padding: 11px 25px;
+    cursor: pointer;
+    &:nth-child(1) {
+      border-radius: 20px 0 0 20px;
+    }
+    &:nth-last-child(1) {
+      border-radius: 0 20px 20px 0;
+    }
+    @for $i from 2 through 4 {
+      &:nth-child(#{$i}) {
+        border-left: 0 solid #EBEBEB;
+        border-right: 0 solid #EBEBEB;
+      }
+      @if $i == 3 {
+        &:nth-child(#{$i}) {
+          border-left: 2px solid #EBEBEB;
+          border-right: 0 solid #EBEBEB;
+        }
+      }
+      @if $i == 4 {
+        &:nth-child(#{$i}) {
+          border-left: 2px solid #EBEBEB;
+          border-right: 0 solid #EBEBEB;
+        }
+      }
+    }
+    &:active {
+      background-color: #000;
+      color: #FFF;
+    }
+    a {
+      font-family: 'Roboto';
+      font-size: 12px;
+      font-weight: bold;
+      color: #B3B3B3;
+    }
+  }
+}

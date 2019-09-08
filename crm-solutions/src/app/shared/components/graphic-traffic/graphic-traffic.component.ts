@@ -22,9 +22,7 @@ export class GraphicTrafficComponent implements OnInit {
   }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.buildChart();
-    }, 1200);
+   this.buildChart();
   }
 
   buildChart() {

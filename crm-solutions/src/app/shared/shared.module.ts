@@ -7,6 +7,7 @@ import { CardsComponent } from './components/cards/cards.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { MenuListComponent } from './components/menu-list/menu-list.component';
 import { GraphicTrafficComponent } from './components/graphic-traffic/graphic-traffic.component';
+import { CalendaryComponent } from './components/calendary/calendary.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { GraphicTrafficComponent } from './components/graphic-traffic/graphic-tr
   declarations: [
     CardsComponent,
     MenuListComponent,
-    GraphicTrafficComponent
+    GraphicTrafficComponent,
+    CalendaryComponent
   ],
   exports: [
     CommonModule,
@@ -29,7 +31,8 @@ import { GraphicTrafficComponent } from './components/graphic-traffic/graphic-tr
     ChartsModule,
     CardsComponent,
     MenuListComponent,
-    GraphicTrafficComponent
+    GraphicTrafficComponent,
+    CalendaryComponent
   ]
 })
 export class SharedModule { }
