@@ -1,11 +1,38 @@
+$tmn: 10px;
+
 .gp {
-  width: 350px;
+  width: 0;
   height: 350px;
+  padding: 30px;
   .item {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     width: 291px;
+  }
+  .item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    p {
+      font-size: 14px;
+      font-family: 'Roboto', Medium;
+      text-align: left;
+      color: #808080;
+      opacity: 1;
+    }
+    img {
+      width: 16px;
+      height: 5px;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  .item-indice {
+    display: flex;
+    justify-content: space-between;
     .items-bolls {
       margin-top: 30px;
       width: 126px;
@@ -25,13 +52,13 @@
           opacity: 1;
         }
         img {
-          width: 10px;
-          height: 10px;
+          width: $tmn;
+          height: $tmn;
         }
         &:nth-child(2) {
           margin-left: 1px;
           &:nth-last-child(2) {
-            margin-left: 10px;
+            margin-left: $tmn;
           }
         }
       }

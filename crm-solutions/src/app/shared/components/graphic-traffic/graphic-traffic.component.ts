@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Chart} from 'chart.js';
+import { Component, OnInit, Input } from '@angular/core';
+import { Chart } from 'chart.js';
 
 @Component({
   selector: 'crm-graphic-traffic',
@@ -10,6 +10,12 @@ export class GraphicTrafficComponent implements OnInit {
 
   public LineChart: any = [];
   private colorBc;
+
+  @Input()
+  public values: number[];
+
+  @Input()
+  public labels: string [];
 
   constructor() {}
 
@@ -24,7 +30,8 @@ export class GraphicTrafficComponent implements OnInit {
         // labels: [],
         datasets: [{
           // label: 'Number of Items Sold in Months',
-          data: [20, 4, 5, 6],
+          // data: [20, 4, 5, 6],
+          data: this.values,
           // fill: 200,
           // lineTension: 10,
           // steppedLine: false,
@@ -47,10 +54,11 @@ export class GraphicTrafficComponent implements OnInit {
         tooltips: {
           callbacks: {
             title: (item, data: any) => {
-              data.labels[0] = 'Mail';
-              data.labels[1] = 'Phone';
-              data.labels[2] = 'Site';
-              data.labels[3] = 'API';
+              data.labels[0] = this.labels[0];
+              data.labels[1] = this.labels[1];
+              data.labels[2] = this.labels[2];
+              data.labels[3] = this.labels[3];
+
               const info = data.labels[item[0].index];
               this.colorBc = data.datasets[0].backgroundColor[item[0].index];
               const dataset = data.datasets[0].data[item[0].index];
@@ -82,11 +90,6 @@ export class GraphicTrafficComponent implements OnInit {
         }
       }
     });
-
   }
-
-
-
-
 
 }
