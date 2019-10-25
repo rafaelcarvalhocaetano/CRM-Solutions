@@ -25,7 +25,6 @@
       }
     }
   }
-
   .card-count {
     text-align: center;
     color: $text;
@@ -37,5 +36,10 @@
       margin-top: 14px;
       font-size: 13px;
     }
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: #333;
   }
 }
