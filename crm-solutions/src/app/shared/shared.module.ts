@@ -10,6 +10,7 @@ import { GraphicTrafficComponent } from './components/graphic-traffic/graphic-tr
 import { CalendaryComponent } from './components/calendary/calendary.component';
 import { DetaListComponent } from './components/deta-list/deta-list.component';
 import { ShowCalendaryComponent } from './components/show-calendary/show-calendary.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { ShowCalendaryComponent } from './components/show-calendary/show-calenda
     GraphicTrafficComponent,
     CalendaryComponent,
     DetaListComponent,
-    ShowCalendaryComponent
+    ShowCalendaryComponent,
+    HeaderComponent
   ],
   exports: [
     CommonModule,
@@ -38,7 +40,8 @@ import { ShowCalendaryComponent } from './components/show-calendary/show-calenda
     GraphicTrafficComponent,
     CalendaryComponent,
     DetaListComponent,
-    ShowCalendaryComponent
+    ShowCalendaryComponent,
+    HeaderComponent
   ]
 })
 export class SharedModule { }
