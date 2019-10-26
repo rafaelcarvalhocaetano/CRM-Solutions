@@ -1,0 +1,31 @@
+@mixin arrowMixin($bb, $tmn, $rotate, $duration, $margin-right) {
+  content: '';
+  border-right: $bb solid blueviolet;
+  border-bottom: $bb solid blueviolet;
+  border-radius: $bb;
+  height: $tmn;
+  width: $tmn;
+  -webkit-transform: rotate($rotate);
+  -ms-transform: rotate($rotate);
+  transform: rotate($rotate);
+  transition-duration: $duration;
+  margin-right: $margin-right;
+}
+
+@mixin flexMixin($flex, $jc, $ji, $ac, $ai, $as) {
+  display: $flex;
+  justify-content: $jc;
+  justify-items: $ji;
+  align-content: $ac;
+  align-items: $ai;
+  align-self: $as;
+}
+@mixin detailsScreen($width, $height, $back-color, $radius, $box-sizing, $border, $border-color, $cursor) {
+  width: $width;
+  height: $height;
+  background-color: $back-color;
+  border-radius: $radius;
+  box-sizing: $box-sizing;
+  border: $border solid $border-color;
+  cursor: $cursor;
+}

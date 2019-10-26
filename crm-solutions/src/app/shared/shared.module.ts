@@ -11,15 +11,11 @@ import { CalendaryComponent } from './components/calendary/calendary.component';
 import { DetaListComponent } from './components/deta-list/deta-list.component';
 import { ShowCalendaryComponent } from './components/show-calendary/show-calendary.component';
 import { HeaderComponent } from './components/header/header.component';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    BrowserModule,
-    ReactiveFormsModule,
-    ChartsModule
-  ],
   declarations: [
     CardsComponent,
     MenuListComponent,
@@ -27,7 +23,16 @@ import { HeaderComponent } from './components/header/header.component';
     CalendaryComponent,
     DetaListComponent,
     ShowCalendaryComponent,
-    HeaderComponent
+    HeaderComponent,
+    DropdownComponent
+  ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    BrowserModule,
+    ReactiveFormsModule,
+    ChartsModule,
+    BrowserAnimationsModule
   ],
   exports: [
     CommonModule,
@@ -41,7 +46,9 @@ import { HeaderComponent } from './components/header/header.component';
     CalendaryComponent,
     DetaListComponent,
     ShowCalendaryComponent,
-    HeaderComponent
+    HeaderComponent,
+    DropdownComponent,
+    BrowserAnimationsModule
   ]
 })
 export class SharedModule { }

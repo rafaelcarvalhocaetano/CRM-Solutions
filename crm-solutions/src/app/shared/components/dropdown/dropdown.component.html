@@ -1,0 +1,10 @@
+<div class="drop-container" [ngClass]="{'dp': arrow}" (click)="arrow = !arrow">{{model}}</div>
+<div *ngIf="arrow" class="item-search">
+  <div class="item-input">
+    <!-- <input id="input-search-drop-down" type="text" placeholder="Search">
+    <img src="../../../../assets/icons/search.png" alt="search input"> -->
+  </div>
+  <!-- <select>
+    <option *ngFor="let item of list" [value]="item">{{item.name}}</option>
+  </select> -->
+</div>
