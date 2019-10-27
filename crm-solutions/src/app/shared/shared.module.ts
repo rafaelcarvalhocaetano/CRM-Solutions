@@ -29,10 +29,9 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
   ],
   imports: [
     CommonModule,
-    FormsModule,
     BrowserModule,
+    FormsModule,
     ReactiveFormsModule,
-    // ChartsModule,
     BrowserAnimationsModule
   ],
   exports: [
@@ -40,7 +39,6 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
     FormsModule,
     BrowserModule,
     ReactiveFormsModule,
-    // ChartsModule,
     CardsComponent,
     MenuListComponent,
     GraphicTrafficComponent,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'crm-login',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+
+  form: FormGroup;
 
   public card = {
     iconTye: 'mala',
@@ -27,6 +30,7 @@ export class LoginComponent implements OnInit {
     {name: 'Bryce Canyon a stunnin…', icon: 'mala'},
     {name: 'What makes a hotel bou…', icon: 'mala'},
   ];
+
   public listaDefault = [
     {name: 'Bryce Canyon a stunnin…', icon: 'client'},
     {name: 'What makes a hotel bou…', icon: 'client'},
@@ -35,15 +39,25 @@ export class LoginComponent implements OnInit {
   public lisN = [11.2, 22.5, 44.1, 100];
   public lisLs = ['Mail', 'Phone', 'Site', 'API'];
 
-  constructor() { }
+
+  constructor(
+    private fb: FormBuilder
+  ) {}
 
   ngOnInit() {
-
+    this.form = this.fb.group({
+      nome: ['', Validators.required]
+    });
   }
 
   show(event: string) {
     const data = event.toLocaleLowerCase();
     console.log('data ', data);
+  }
+
+  sendForm() {
+    // this.form.value;
+    console.log('FORM:::', this.form.value)
   }
 
 }

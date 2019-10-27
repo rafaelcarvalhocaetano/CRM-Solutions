@@ -1,10 +1,19 @@
-<div class="drop-container" [ngClass]="{'dp': arrow}" (click)="arrow = !arrow">{{model}}</div>
+<div class="drop-container" [ngClass]="{'dp': arrow}" (click)="arrow = !arrow">
+  <span>{{ count > 1 ? (count + ' Selecionados') : count }}</span>
+  <a *ngIf="count > 0" (click)="clearAll()">
+    <i class="crm-times-circle"></i>
+  </a>
+</div>
 <div class="item-search" *ngIf="arrow" [@changeDivSize]>
   <div class="item-input">
-    <input id="input-search-drop-down" type="text" placeholder="Search">
+    <input id="input-search-drop-down" type="text" placeholder="Search" [(ngModel)]="searchValue" (input)="searchIntant($event.target.value)">
     <div class="items-icons">
-      <i class="crm-times-circle"></i>
-      <i class="crm-search" ></i>
+      <a *ngIf="searchValue.length" (click)="clearValue()">
+        <i class="crm-times-circle"></i>
+      </a>
+      <a (click)="searchClick()">
+        <i class="crm-search"></i>
+      </a>
     </div>
   </div>
   <!-- <select multiple>
@@ -12,9 +21,11 @@
     <option *ngFor="let item of list" value="item">{{item.name}}</option>
   </select> -->
   <ul class="item-list">
-    <li *ngFor="let item of list">
-      <input type="checkbox" [id]="item.name" [value]="item.name">
-      <label [for]="item.name">{{ item.name }}</label>
+    <li *ngFor="let item of state">
+      <input type="checkbox" [id]="item.name">
+      <a id="dd-action-{{item.name}}" (click)="selectItem(item)">
+        <label [ngClass]="{'cltp': item.selected}" [for]="item.name">{{ item.name }}</label>
+      </a>
     </li>
   </ul>
   <p>Selecione uma ou mais opções</p>
