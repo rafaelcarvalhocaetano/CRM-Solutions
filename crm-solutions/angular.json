@@ -28,7 +28,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/assets/fonts-icons/fonts/style.css"
+              "src/assets/style.css"
             ],
             "scripts": [],
             "es5BrowserSupport": true
