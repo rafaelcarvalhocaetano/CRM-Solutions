@@ -27,16 +27,10 @@
   border-radius: 0 0 5px 5px;
   box-shadow: 1px 2px 6px 0px rgb(199, 195, 195);
   .item-input {
-    width: 90%;
-    height: 15%;
-    border-radius: 40px;
-    border: 1px solid rgb(199, 195, 195);
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 0 3%;
     margin: 5px;
+    @include detailsScreen(90%, 15%, null, 40px, null, 1px, rgb(199, 195, 195), pointer);
+    @include flexMixin(flex, space-between, null, null, center, null);
     input {
       width: 90%;
       border-radius: 40px;
@@ -50,18 +44,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      img {
-        &:nth-child(1) {
-          width: 11px;
-          height: 11px;
-          border: 1px solid rgb(199, 195, 195);;
-          border-radius: 10px;
-          padding: 2px;
-          margin-right: 5px;
-          &:hover {
-            border-color: blueviolet;
-            box-shadow: 0px 0px 2px 0px rgb(199, 195, 195);
-          }
+      i {
+        color: rgba(137, 43, 226, 0.774);
+        margin: 0 5px;
+        &:hover {
+          color: rgba(137, 43, 226, 0.562);
         }
       }
     }
@@ -134,9 +121,7 @@
     }
   }
   P {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexMixin(flex, center, null, null, center, null);
     text-align: center;
     padding: 5px 0;
   }
