@@ -1,10 +1,23 @@
+<i class="icon-ad"></i>
+
 <div class="drop-container" [ngClass]="{'dp': arrow}" (click)="arrow = !arrow">{{model}}</div>
-<div *ngIf="arrow" class="item-search">
+<div class="item-search" *ngIf="arrow" [@changeDivSize]>
   <div class="item-input">
-    <!-- <input id="input-search-drop-down" type="text" placeholder="Search">
-    <img src="../../../../assets/icons/search.png" alt="search input"> -->
+    <input id="input-search-drop-down" type="text" placeholder="Search">
+    <div class="items-icons">
+      <img src="../../../../assets/icons/close.png" alt="clear">
+      <img src="../../../../assets/icons/search.png" alt="search input">
+    </div>
   </div>
-  <!-- <select>
-    <option *ngFor="let item of list" [value]="item">{{item.name}}</option>
+  <!-- <select multiple>
+    <option selected>Choose...</option>
+    <option *ngFor="let item of list" value="item">{{item.name}}</option>
   </select> -->
+  <ul class="item-list">
+    <li *ngFor="let item of list">
+      <input type="checkbox" [id]="item.name" [value]="item.name">
+      <label [for]="item.name">{{ item.name }}</label>
+    </li>
+  </ul>
+  <p>Selecione uma ou mais opções</p>
 </div>

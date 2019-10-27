@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { ChartsModule } from 'ng2-charts';
+
+// import { ChartsModule } from 'ng2-charts';
 
 import { CardsComponent } from './components/cards/cards.component';
-import { BrowserModule } from '@angular/platform-browser';
 import { MenuListComponent } from './components/menu-list/menu-list.component';
 import { GraphicTrafficComponent } from './components/graphic-traffic/graphic-traffic.component';
 import { CalendaryComponent } from './components/calendary/calendary.component';
@@ -13,7 +15,6 @@ import { ShowCalendaryComponent } from './components/show-calendary/show-calenda
 import { HeaderComponent } from './components/header/header.component';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     BrowserModule,
     ReactiveFormsModule,
-    ChartsModule,
+    // ChartsModule,
     BrowserAnimationsModule
   ],
   exports: [
@@ -39,7 +40,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     BrowserModule,
     ReactiveFormsModule,
-    ChartsModule,
+    // ChartsModule,
     CardsComponent,
     MenuListComponent,
     GraphicTrafficComponent,
