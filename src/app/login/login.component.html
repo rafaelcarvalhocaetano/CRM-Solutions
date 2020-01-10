@@ -1,45 +1,103 @@
-<!-- CARDS -->
-<!-- <crm-cards
-  [iconType]="card.iconTye"
-  [cardValue]="card.cardValue"
-  [cardCount]="card.countActions"
-  [cardMensage]="card.information"
-></crm-cards> -->
-<!-- MENU LATERAL -->
-<!-- <crm-menu-list
-  [menuList]="list">
-</crm-menu-list>
-<crm-menu-list
-  [menuList]="listSecundary"
-  [title]="'Last Leads'"
-  [btnTitle]="'Show More'">
-</crm-menu-list>
-<crm-menu-list
-  [menuList]="listaDefault"
-  [title]="'Last Clients'"
-  [btnTitle]="'Show More'">
-</crm-menu-list>
-
-<crm-graphic-traffic
-  [values]="lisN"
-  [labels]="lisLs"
-></crm-graphic-traffic>
-
-<div style="margin: 20px">
-  <crm-calendary (open)="show($event)"></crm-calendary>
-</div>
-
-<div style="margin: 20px">
-  <crm-deta-list></crm-deta-list>
-</div> -->
-
 <!-- AJUSTE NO HEADER -->
-<!-- <crm-header></crm-header> -->
-<div class="input-control">
-  <!-- <crm-dropdown></crm-dropdown> -->
-  <form [formGroup]="form">
-    <crm-dropdown></crm-dropdown>
-  </form>
+<div class="crm-container-login">
+  <crm-header class="crm-hdr" (click)="openMenu = !openMenu"></crm-header>
+  <!-- MENU LATERAL -->
+  <div class="crm-ctm-thr">
+    <div class="crm-cldr">
+      <div class="crm-calend">
+        <crm-calendary (open)="show($event)"></crm-calendary>
+      </div>
+      <!-- CARDS -->
+      <div class="crm-list-cards">
+        <crm-cards
+        class="crm-card"
+          [iconType]="card.iconTye"
+          [cardValue]="card.cardValue"
+          [cardCount]="card.countActions"
+          [cardMensage]="card.information"
+        ></crm-cards>
+        <crm-cards
+        class="crm-card"
+          [iconType]="card.iconTye"
+          [cardValue]="card.cardValue"
+          [cardCount]="card.countActions"
+          [cardMensage]="card.information"
+        ></crm-cards>
+        <crm-cards
+        class="crm-card"
+          [iconType]="card.iconTye"
+          [cardValue]="card.cardValue"
+          [cardCount]="card.countActions"
+          [cardMensage]="card.information"
+        ></crm-cards>
+        <crm-cards
+        class="crm-card"
+          [iconType]="card.iconTye"
+          [cardValue]="card.cardValue"
+          [cardCount]="card.countActions"
+          [cardMensage]="card.information"
+        ></crm-cards>
+        <crm-cards
+        class="crm-card"
+          [iconType]="card.iconTye"
+          [cardValue]="card.cardValue"
+          [cardCount]="card.countActions"
+          [cardMensage]="card.information"
+        ></crm-cards>
+        <crm-cards
+        class="crm-card"
+          [iconType]="card.iconTye"
+          [cardValue]="card.cardValue"
+          [cardCount]="card.countActions"
+          [cardMensage]="card.information"
+        ></crm-cards>
+        <crm-cards
+        class="crm-card"
+          [iconType]="card.iconTye"
+          [cardValue]="card.cardValue"
+          [cardCount]="card.countActions"
+          [cardMensage]="card.information"
+        ></crm-cards>
+        <crm-cards
+        class="crm-card"
+          [iconType]="card.iconTye"
+          [cardValue]="card.cardValue"
+          [cardCount]="card.countActions"
+          [cardMensage]="card.information"
+        ></crm-cards>
+      </div>
+      <div class="crm-idm">
+        <crm-graphic-traffic
+        class="crm-grp"
+          [values]="lisN"
+          [labels]="lisLs"
+        ></crm-graphic-traffic>
+        <crm-deta-list class="crm-dl"></crm-deta-list>
+        <form [formGroup]="form">
+          <crm-dropdown></crm-dropdown>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
 
+<div class="crm-ltr" *ngIf="openMenu">
+  <div class="mdn">
+    <crm-menu-list
+    [menuList]="list">
+    </crm-menu-list>
+    <!-- LAST LEADS -->
+    <crm-menu-list
+      [menuList]="listSecundary"
+      [title]="'Last Leads'"
+      [btnTitle]="'Show More'">
+    </crm-menu-list>
 
+    <!-- LAST CLIENTS -->
+    <crm-menu-list
+      [menuList]="listaDefault"
+      [title]="'Last Clients'"
+      [btnTitle]="'Show More'">
+    </crm-menu-list>
+  </div>
+</div>

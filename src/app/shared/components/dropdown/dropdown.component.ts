@@ -13,17 +13,6 @@ import {
   styleUrls: ['./dropdown.component.scss'],
   animations: [
     trigger('changeDivSize', [
-      // amplica a imagem
-      // state('initial', style({
-      //   backgroundColor: 'green',
-      //   transform: 'scale(1)'
-      // })),
-      // state('final', style({
-      //   backgroundColor: 'red',
-      //   transform: 'scale(1.5)'
-      // })),
-      // transition('final=>initial', animate(4000)),
-      // transition('initial=>final', animate(300)),
       state('void', style({
         opacity: 0,
         height: 0
@@ -35,7 +24,7 @@ import {
 export class DropdownComponent implements OnInit {
 
   public model: any;
-  public arrow = true;
+  public arrow = false;
   public list = [
     {id: 1, name: 'Rafael 1', selected: true},
     {id: 2, name: 'Rafael 2', selected: true},
@@ -54,8 +43,8 @@ export class DropdownComponent implements OnInit {
   ];
 
   public dataValue: any[] = [];
-  public count: number | string;
-  private state: any[];
+  public count: number;
+  public state: any[];
   public searchValue = '';
 
   public ngOnInit() {
@@ -65,11 +54,9 @@ export class DropdownComponent implements OnInit {
   public selectItem(data: any) {
     this.state.map(x => {
       if (x.id === data.id && x.selected) {
-        console.log(' data 1');
         delete x.selected;
         this.dataValue.splice(x, 1);
       } else if (x.id === data.id) {
-        console.log(' data 2');
         x.selected = true;
         this.dataValue.push(x.name);
       }
@@ -87,7 +74,7 @@ export class DropdownComponent implements OnInit {
   }
 
   private validCount(list: any []) {
-    if (list.length === 1) {
+    if (list.length < 1) {
       return list[0];
     } else {
       return list.length;
@@ -103,10 +90,6 @@ export class DropdownComponent implements OnInit {
   public searchClick() {
     this.state = [];
     this.list.filter(x => x.name.includes(this.searchValue) ? this.state.push(x) : null);
-  }
-
-  public clearAll() {
-    console.log(' clearAll ')
   }
 
 }

@@ -9,6 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
 
   form: FormGroup;
+  public openMenu = false;
 
   public card = {
     iconTye: 'mala',
