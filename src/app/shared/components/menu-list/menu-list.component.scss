@@ -1,28 +1,35 @@
 @import '../../../../assets/theme/global.scss';
 
 .menu {
-  width: 180px;
+  width: 100%;
   background-color: $white-secundary;
-  padding: 10px 26px;
   border: 1px solid #F0F0F0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
   .menu-title {
     font-size: 14px;
+    font-weight: bold;
     color: $text-color-card-secundary;
-    opacity: 1;
     margin: 10px 0;
   }
   .menu-list {
+    width: 100%;
     .menu-item {
       width: 100%;
-      padding: 10px 0;
       cursor: pointer;
       &:hover {
         background-color: #F0F0F0;
       }
       .menu-item-action {
+        padding: 10px 20px;
+        width: 100%;
         font-size: 13px;
         color: $text;
         white-space: nowrap;
+        display: flex;
+        align-items: center;
         img {
           margin-right: 20px;
           width: 16px;
@@ -43,11 +50,12 @@
     border: 2px solid $border;
     color: $text-color-card-secundary;
     font-size: 12px;
-    font-weight: bold;
+    font-weight: normal;
     background-color: $white-secundary;
     cursor: pointer;
     &:hover {
-      color: rgb(85, 84, 84);
+      color: rgb(58, 57, 57);
+      font-weight: bold;
       border: 2px solid rgb(185, 183, 183);
     }
   }

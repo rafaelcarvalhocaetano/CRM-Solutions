@@ -1,9 +1,9 @@
-<div class="menu">
+<div class="menu" >
   <p *ngIf="title.length" class="menu-title">{{ title }}</p>
   <ul class="menu-list" *ngFor="let items of menuList; let i = index">
     <li class="menu-item">
       <a routerLink="" class="menu-item-action" [class.low]="showColor && i === 0"
-        (click)="clickMenu.emit()">
+        (click)="clickMenu.emit({closed: false, item: items })">
         <img src="../../../../assets/icons/{{items.icon}}.png" alt="menu-{{items.icon}}">
         <span class="menu-name">{{ items.name }}</span>
       </a>

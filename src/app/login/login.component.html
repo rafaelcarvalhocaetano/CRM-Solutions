@@ -2,7 +2,7 @@
 <div class="crm-container-login">
   <crm-header class="crm-hdr" (click)="openMenu = !openMenu"></crm-header>
   <!-- MENU LATERAL -->
-  <div class="crm-ctm-thr">
+  <div class="crm-ctm-thr" [ngClass]="{'mdh': openMenu}">
     <div class="crm-cldr">
       <div class="crm-calend">
         <crm-calendary (open)="show($event)"></crm-calendary>
@@ -84,17 +84,22 @@
 <div class="crm-ltr" *ngIf="openMenu">
   <div class="mdn">
     <crm-menu-list
-    [menuList]="list">
+      [menuList]="list"
+      (clickMenu)="getValueMenu($event)"
+    >
     </crm-menu-list>
     <!-- LAST LEADS -->
     <crm-menu-list
       [menuList]="listSecundary"
       [title]="'Last Leads'"
-      [btnTitle]="'Show More'">
+      [btnTitle]="'Show More'"
+      (clickMenu)="getValueMenu($event)"
+    >
     </crm-menu-list>
 
     <!-- LAST CLIENTS -->
     <crm-menu-list
+      (clickMenu)="getValueMenu($event)"
       [menuList]="listaDefault"
       [title]="'Last Clients'"
       [btnTitle]="'Show More'">

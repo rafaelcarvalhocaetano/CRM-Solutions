@@ -17,8 +17,11 @@ export class MenuListComponent implements OnInit {
   @Input()
   public btnTitle = '';
 
+  @Input()
+  public show = new EventEmitter<boolean>();
+
   @Output()
-  public clickMenu = new EventEmitter();
+  public clickMenu = new EventEmitter<any>();
 
   public showColor = false;
 

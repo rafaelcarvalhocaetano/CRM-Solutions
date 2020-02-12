@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
 
   form: FormGroup;
-  public openMenu = false;
+  public openMenu = true;
 
   public card = {
     iconTye: 'mala',
@@ -59,6 +59,10 @@ export class LoginComponent implements OnInit {
   sendForm() {
     // this.form.value;
     console.log('FORM:::', this.form.value)
+  }
+
+  getValueMenu(data) {
+    this.openMenu = data.closed;
   }
 
 }

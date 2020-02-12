@@ -3,23 +3,20 @@
   height: 100%;
   display: flex;
   overflow: hidden;
-
   flex-direction: column;
   .crm-ctm-thr {
     display: flex;
-    .crm-ltr {
-      background-color: tomato;
-      height: 100vh;
-      left: 0;
+    &.mdh {
+      position: fixed;
     }
     .crm-cldr {
       width: 100%;
       height: 100%;
-      margin-bottom: 20px;
       display: flex;
       flex-direction: column;
       .crm-calend {
         width: 100%;
+        height: 20%;
         margin: 1% 0;
         display: flex;
         justify-content: center;
@@ -66,13 +63,16 @@
 }
 .crm-ltr {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: rgba(131, 130, 130, 0.226);
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
   .mdn {
+    width: 18%;
+    height: 100vh;
+    background-color: #FFF;
     overflow: hidden;
   }
 }
