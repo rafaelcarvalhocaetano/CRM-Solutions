@@ -1,6 +1,6 @@
 <!-- AJUSTE NO HEADER -->
 <div class="crm-container-login">
-  <crm-header class="crm-hdr" (click)="openMenu = !openMenu"></crm-header>
+  <crm-header class="crm-hdr" (openMenu)="openMenu = true"></crm-header>
   <!-- MENU LATERAL -->
   <div class="crm-ctm-thr">
     <div class="crm-cldr">
@@ -68,7 +68,7 @@
       </div>
       <div class="crm-idm">
         <crm-graphic-traffic
-        class="crm-grp"
+          class="crm-grp"
           [values]="lisN"
           [labels]="lisLs"
         ></crm-graphic-traffic>
