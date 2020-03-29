@@ -57,8 +57,6 @@ export class LoginComponent implements OnInit {
   }
 
   sendForm() {
-    // this.form.value;
-    console.log('FORM:::', this.form.value)
   }
 
   getValueMenu(data) {
