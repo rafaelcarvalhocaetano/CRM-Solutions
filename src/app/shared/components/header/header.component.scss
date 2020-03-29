@@ -1,20 +1,35 @@
 .main-header {
   width: 98vw;
-  height: 10vh;
+  height: 9vh;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   border-bottom: 1px solid #F0F0F0;
+  .btn-menu {
+    margin-left: 25px;
+    border: none;
+    background-color: transparent;
+    &:focus {
+      outline: none;
+    }
+  }
   .menu {
-    width: 17vw;
-    height: 10vh;
+    width: 0;
+    height: 9vh;
     display: flex;
     justify-content: space-between;
-    padding: 0 2%;
     justify-items: center;
     align-items: center;
     box-sizing: border-box;
     border-right: 1px solid #F0F0F0;
+    &.open {
+      visibility: visible;
+      animation: show 800ms both;
+    }
+    &.closed {
+      animation: closed 800ms both;
+    }
     .menu-content {
       display: flex;
       cursor: pointer;
@@ -80,5 +95,23 @@
         padding-right: 10px;
       }
     }
+  }
+}
+
+@keyframes show {
+  from {
+    width: 0;
+  }
+  to {
+    width: 17vw;
+  }
+}
+
+@keyframes closed {
+  from {
+    width: 17vw;
+  }
+  to {
+    width: 0;
   }
 }

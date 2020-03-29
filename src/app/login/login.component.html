@@ -81,12 +81,11 @@
   </div>
 </div>
 
-<div class="crm-ltr" *ngIf="openMenu">
+<div class="crm-ltr" *ngIf="openMenu" (click)="openMenu = false">
   <div class="mdn">
     <crm-menu-list
       [menuList]="list"
-      (clickMenu)="getValueMenu($event)"
-    >
+      (clickMenu)="getValueMenu($event)">
     </crm-menu-list>
     <!-- LAST LEADS -->
     <crm-menu-list

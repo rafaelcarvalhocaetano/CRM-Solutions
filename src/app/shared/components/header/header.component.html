@@ -1,7 +1,9 @@
 <header class="main-header">
-  <div class="item-menu menu">
-    <div class="menu-content" (click)="openMenu.emit(false)">
-      <img src="../../../../assets/icons/sand.png" alt="sanduich menu">
+  <div class="item-menu menu"  [ngClass]="{'open': flag, 'closed': !flag}">
+    <div class="menu-content">
+      <button class="btn-menu" (click)="flag = !flag; openMenu.emit(flag)">
+        <img src="../../../../assets/icons/sand.png" alt="sanduich menu">
+      </button>
       <p>Menu</p>
     </div>
   </div>

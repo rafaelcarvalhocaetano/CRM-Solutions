@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'crm-header',
@@ -7,8 +7,14 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent {
 
+  public flag = false;
+
   @Output()
   public openMenu = new EventEmitter<boolean>();
   public showSearch = false;
+
+  constructor(
+    private eRefe: ElementRef
+  ) {  }
 
 }
